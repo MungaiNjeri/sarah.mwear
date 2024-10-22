@@ -1,0 +1,371 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .banner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.65)), url(./images/background.jpeg);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .navbar {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    width: 120px;
+    cursor: pointer;
+    color: orange;
+  }
+  
+  .navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+  }
+  
+  .navbar ul li a {
+    text-decoration: none;
+    color: #ffc300;
+    text-transform: uppercase;
+  }
+  
+  .navbar ul li a::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #ffc300;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+  }
+  
+  .navbar ul li a:hover::after {
+    width: 100%;
+  }
+  
+  .content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: orange;
+  }
+  
+  .content h1 {
+    font-size: 70px;
+    margin-top: 80px;
+  }
+  
+  .content p {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+  }
+  
+  .button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #ffc300;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  button span {
+    background: #ffc300;
+    width: 0;
+    height: 100%;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    width: 100%;
+  }
+  
+  .button:hover {
+    border: none;
+  }
+  
+  /* Responsive Design */
+  
+  /* Tablet Screens (768px and below) */
+  @media (max-width: 768px) {
+    .navbar {
+      width: 100%;
+      padding: 15px 0;
+    }
+  
+    .navbar ul {
+      text-align: center;
+    }
+  
+    .navbar ul li {
+      margin: 0 10px;
+    }
+  
+    .content h1 {
+      font-size: 50px;
+    }
+  
+    button {
+      width: 180px;
+      padding: 12px 0;
+    }
+  
+    .content1 {
+      font-size: 14px;
+    }
+  }
+  
+  /* Mobile Screens (480px and below) */
+  @media (max-width: 480px) {
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .navbar ul {
+      padding: 0;
+    }
+  
+    .navbar ul li {
+      display: block;
+      margin: 10px 0;
+    }
+  
+    .content h1 {
+      font-size: 35px;
+    }
+  
+    .content p {
+      font-size: 14px;
+      line-height: 20px;
+      width: 90%;
+    }
+  
+    button {
+      width: 150px;
+      padding: 10px 0;
+    }
+  
+    .content1 {
+      font-size: 12px;
+    }
+  }
+  
+  /* Login Form Styles */
+  .login-container {
+    width: 100%;
+    height: 100vh;
+    display: none; /* Hide by default */
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10; /* Ensures it overlays the rest of the page */
+  }
+  
+  .login-box {
+    width: 300px;
+    padding: 40px;
+    background: #fff;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+  }
+  
+  .login-box h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+  }
+  
+  .input-box {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  
+  .input-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    background: transparent;
+  }
+  
+  .input-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #333;
+    pointer-events: none;
+    transition: 0.5s;
+  }
+  
+  .input-box input:focus ~ label,
+  .input-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #ffc300;
+    font-size: 12px;
+  }
+  
+  button[type="submit"],
+  .close-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #ffc300;
+    color: #fff;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background 0.3s;
+  }
+  
+  button[type="submit"]:hover,
+  .close-button:hover {
+    background: #e0a800;
+  }
+  
+  /* Services Section Styles */
+  .services-section {
+    width: 100%;
+    padding: 40px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for visibility */
+  }
+  
+  .services-section h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .services-container {
+    display: flex; /* Align services horizontally */
+    justify-content: center; /* Center services */
+    gap: 20px; /* Space between service boxes */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  }
+  
+  .service-item {
+    width: 250px; /* Fixed width for service boxes */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    background-color: #fff; /* Default background color */
+  }
+  
+  .service-item:hover {
+    background-color: #f0f0f0; /* Change color on hover */
+  }
+  
+  .service-item h3 {
+    font-size: 28px;
+    color: #555;
+  }
+  
+  .service-item p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+    margin-top: 10px;
+  }
+  
+  /* Contact Section Styles */
+  .contact-section {
+    width: 100%;
+    padding: 40px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for visibility */
+  }
+  
+  .contact-section h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .contact-section p {
+    font-size: 18px;
+    color: #555;
+  }
+  
+  /* Gallery Section Styles */
+  .gallery-section {
+    width: 100%;
+    padding: 40px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for visibility */
+  }
+  
+  .gallery-section h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .gallery-item {
+    width: 250px;
+    position: relative;
+  }
+  
+  .image-container {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .gallery-image {
+    width: 100%;
+    transition: transform 0.5s ease;
+  }
+  
+  .image-container:hover .gallery-image {
+    transform: scale(1.1);
+  }
+  
+  h3 {
+    margin-bottom: 10px;
+  }

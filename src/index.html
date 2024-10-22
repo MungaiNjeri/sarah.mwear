@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailor Design</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="banner">
+      <div class="navbar">
+        <h1 class="logo"> logo </h1>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#login" id="login-btn">Login</a></li>
+        </ul>
+      </div>
+      <div class="content">
+        <h1><span>SARAH</span>-M-WEAR</h1>
+        <p class="content1">As a tailor specializing in designer clothes, my work revolves around crafting high-quality, custom garments that combine fashion-forward designs with impeccable craftsmanship.<br>
+          Each piece is tailored to fit my clients' unique measurements and preferences, ensuring they not only look stylish but feel comfortable and confident in their attire.
+        </p>
+        <div>
+          <button type="button" class="button" id="book-fitting"> <span class="span"></span> Book Fitting</button>
+          <button type="button" class="button" id="explore-more"> <span class="span"></span> Explore More</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="login-container" id="login">
+      <div class="login-box">
+        <h2>Login</h2>
+        <form action="/login" method="POST">
+          <div class="input-box">
+            <input type="email" name="email" required>
+            <label>Email</label>
+          </div>
+          <div class="input-box">
+            <input type="password" name="password" required>
+            <label>Password</label>
+          </div>
+          <button type="submit">Login</button>
+          <button type="button" class="close-button" id="close-login">Close</button>
+          <p class="signup-link">Don't have an account? <a href="#signup">Sign Up</a></p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Services Section -->
+    <div class="services-section" id="services">
+      <h2>Our Services</h2>
+      <div class="services-container">
+        <div class="service-item">
+          <h3>Custom Tailoring</h3>
+          <p>Our custom tailoring service ensures that each garment is uniquely made to fit your body perfectly. We take precise measurements and work closely with you to select fabrics and styles that suit your personality and lifestyle.</p>
+        </div>
+        <div class="service-item">
+          <h3>Alterations and Repairs</h3>
+          <p>Whether it’s a simple hem or a complex alteration, our skilled tailors can handle any repair job. We focus on restoring garments to their original condition or modifying them to suit your evolving style.</p>
+        </div>
+        <div class="service-item">
+          <h3>Designer Clothing Consultation</h3>
+          <p>Our designer clothing consultation service helps you choose the right styles and fabrics for your wardrobe. We offer personalized advice on the latest trends and ensure that your wardrobe remains stylish and relevant.</p>
+        </div>
+      </div>
+    </div>
+
+  
+    <!-- Gallery Section -->
+    <div class="gallery-section" id="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery-container">
+        <div class="gallery-item">
+          <h3>Men</h3>
+          <div class="image-container">
+            <img src="images/_ (3).jpeg"  class="gallery-image">
+            <img src="images/swear.jpeg"  class="gallery-image">
+            <img src="images/Wangyue Mens 3 Piece Slim Fit Suit Wedding Prom Tuxedo Formal Business Suits for Men Blazer Vest Pants Set.jpeg"  class="gallery-image">
+          </div>
+        </div>
+        <div class="gallery-item">
+          <h3>Children</h3>
+          <div class="image-container">
+            <img src="images/ankarakids.jpeg" class="gallery-image">
+            <img src="images/children.jpeg" class="gallery-image">
+            <img src="images/kid.jpeg"class="gallery-image">
+          </div>
+        </div>
+        <div class="gallery-item">
+          <h3>Ladies</h3>
+          <div class="image-container">
+            <img src="images/_ (2).jpeg" class="gallery-image">
+            <img src="images/fisdy.jpeg" class="gallery-image">
+            <img src="images/sam.jpeg" class="gallery-image">
+          </div>
+        </div>
+          <!-- Contact Us Section -->
+    <div class="contact-section" id="contact">
+      <h2>Contact Us</h2>
+      <p>Email: <a href="mailto:info@tailordesign.com">info@tailordesign.com</a></p>
+      <p>Phone: <a href="tel:+254705185027">+254 705 185 027</a></p>
+    </div>
+
+      </div>
+    </div>
+  </header>
+</body>
+</html>
